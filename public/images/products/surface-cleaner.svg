@@ -1,0 +1,28 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5fa0cf"/>
+      <stop offset="1" stop-color="#1f4058"/>
+    </linearGradient>
+    <linearGradient id="pouch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,255,255,0.16)"/>
+      <stop offset="1" stop-color="rgba(255,255,255,0.02)"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#efd289"/>
+      <stop offset="1" stop-color="#c9a24b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <g opacity="0.5">
+    <circle cx="80" cy="500" r="180" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="540" cy="90" r="140" fill="rgba(255,255,255,0.05)"/>
+  </g>
+  <path d="M195 150 h210 a26 26 0 0 1 26 26 v330 a44 44 0 0 1-44 44 H213 a44 44 0 0 1-44-44 V176 a26 26 0 0 1 26-26 z" fill="url(#pouch)" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+  <rect x="262" y="112" width="76" height="52" rx="12" fill="rgba(255,255,255,0.28)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <rect x="278" y="96" width="44" height="26" rx="8" fill="rgba(255,255,255,0.35)"/>
+  <text x="300" y="330" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="40" fill="url(#gold)" letter-spacing="4">CYNORA</text>
+  <line x1="240" y1="352" x2="360" y2="352" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <text x="300" y="382" text-anchor="middle" font-family="Arial, sans-serif" font-weight="600" font-size="15" fill="rgba(255,255,255,0.85)" letter-spacing="2">CITRUS FRESH</text>
+  <path d="M540 470 l10 26 26 10 -26 10 -10 26 -10-26 -26-10 26-10z" fill="url(#gold)" opacity="0.85"/>
+</svg>

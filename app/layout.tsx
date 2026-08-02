@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   description:
     "Premium cleaning solutions for homes & businesses. Powerful, trusted, effective.",
   icons: {
-    icon: "/images/favicon.png",
-    shortcut: "/images/favicon.png",
-    apple: "/images/favicon.png",
+    icon: "/images/favicon.ico",
+    shortcut: "/images/favicon.ico",
+    apple: "/images/apple-touch-icon.png",
   },
 };
 

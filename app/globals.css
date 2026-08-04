@@ -178,6 +178,15 @@ ul {
   }
 }
 
+
+/* Add to globals.css */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;
@@ -206,11 +215,21 @@ ul {
 }
 
 .topbar-inner span { white-space: nowrap; }
-.topbar-center { flex: 1; text-align: center; }
+.topbar-center {
+  flex: 1;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.topbar-center span { text-overflow: ellipsis; overflow: hidden; display: inline-block; max-width: 100%; }
 
 @media (max-width: 800px) {
   .topbar-inner { padding: 8px 20px; font-size: 11px; }
   .topbar-right { display: none; }
+}
+
+@media (max-width: 520px) {
+  .topbar-center { display: none; }
 }
 
 /* ---------- Header ---------- */
@@ -231,6 +250,15 @@ ul {
   max-width: 1280px;
   margin: 0 auto;
   gap: 24px;
+}
+
+@media (max-width: 480px) {
+  .header-inner { padding: 4px 16px; gap: 10px; }
+  .logo-mark { width: 34px; height: 34px; }
+  .logo-text b { font-size: 17px; }
+  .logo-text small { display: none; }
+  .header-actions { gap: 2px; }
+  .icon-btn { width: 34px; height: 34px; }
 }
 
 .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
@@ -542,6 +570,8 @@ ul {
   align-items: center;
 }
 
+.hero-inner > * { min-width: 0; }
+
 @media (max-width: 980px) {
   .hero-inner { grid-template-columns: 1fr; text-align: center; }
 }
@@ -606,7 +636,9 @@ ul {
 
 .hero-visual {
   position: relative;
-  height: 460px;
+  height: 260px;
+  min-width: 0;
+  max-width: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -661,9 +693,24 @@ ul {
   .hero-dots { bottom: -8px; }
 }
 
+@media (max-width: 640px) {
+  .hero-visual {
+    height: auto;
+    overflow-x: auto;
+    overflow-y: visible;
+    justify-content: flex-start;
+    padding: 6px 4px 34px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+  }
+  .hero-visual::-webkit-scrollbar { display: none; }
+  .hero-slide-fade { justify-content: flex-start; width: max-content; }
+  .pouch { width: 218px; flex-shrink: 0; scroll-snap-align: center; }
+}
+
 .pouch {
   position: relative;
-  width: 180px;
+  width: 240px;
   border-radius: 20px 20px 34px 34px;
   padding: 20px 12px 26px;
   box-shadow: var(--shadow-soft);
@@ -711,10 +758,10 @@ ul {
 
 .pouch .label { font-size: 8.5px; text-align: center; opacity: 0.9; letter-spacing: 0.03em; }
 
-.pouch.p1 { height: 300px; background: linear-gradient(160deg, #6b5a8c, #453a63); animation-delay: 0s; }
-.pouch.p2 { height: 340px; background: linear-gradient(160deg, #e0b23c, #b8811d); animation-delay: 0.6s; }
-.pouch.p3 { height: 300px; background: linear-gradient(160deg, #3f7ea6, #274f6b); animation-delay: 1.1s; }
-.pouch.p4 { height: 260px; background: linear-gradient(160deg, var(--green), var(--green-deep)); animation-delay: 1.6s; }
+.pouch.p1 { height: 260px; width: 200px; background: linear-gradient(160deg, #6b5a8c, #453a63); animation-delay: 0s; }
+.pouch.p2 { height: 280px; width: 200px; background: linear-gradient(160deg, #e0b23c, #b8811d); animation-delay: 0.6s; }
+.pouch.p3 { height: 260px; width: 200px; background: linear-gradient(160deg, #3f7ea6, #274f6b); animation-delay: 1.1s; }
+.pouch.p4 { height: 240px; width: 200px; background: linear-gradient(160deg, var(--green), var(--green-deep)); animation-delay: 1.6s; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -1471,6 +1518,25 @@ a.promo-banner:hover {
 
 /* ---------- Dashboard ---------- */
 .dash-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: flex-start; }
+
+/* Defensive: CSS Grid items default to min-width:auto, which lets long
+   text/images force a track wider than the viewport instead of wrapping —
+   this was the root cause of the hero section breaking mobile layout
+   above. Applying it everywhere protects the rest of the site the same
+   way. */
+.features-grid > *,
+.product-grid > *,
+.trust-strip > *,
+.how-grid > *,
+.gallery-grid > *,
+.wishlist-grid > *,
+.footer-grid > *,
+.shop-layout > *,
+.pd-grid > *,
+.checkout-grid > *,
+.dash-layout > * {
+  min-width: 0;
+}
 .dash-sidebar { background: var(--ivory); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); padding: 26px 0; position: sticky; top: 100px; }
 .dash-profile { padding: 0 24px 20px; border-bottom: 1px solid var(--line); margin-bottom: 12px; display: flex; align-items: center; gap: 14px; }
 .dash-avatar { width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(150deg, var(--gold-light), var(--gold-deep)); color: #fff; display: flex; align-items: center; justify-content: center; font-family: "Playfair Display", serif; font-weight: 700; font-size: 19px; flex-shrink: 0; }

@@ -14,7 +14,8 @@ export default function HeroSlider({ products }: { products: Product[] }) {
     if (chunk.length === PAGE_SIZE) pages.push(chunk);
   }
   // Always have at least one page, even with fewer than 4 products.
-  if (pages.length === 0 && products.length > 0) pages.push(products.slice(0, PAGE_SIZE));
+  if (pages.length === 0 && products.length > 0)
+    pages.push(products.slice(0, PAGE_SIZE));
 
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -48,7 +49,11 @@ export default function HeroSlider({ products }: { products: Product[] }) {
     >
       <div className="hero-slide-fade" key={index}>
         {current.map((p, i) => (
-          <div className={`pouch p${i + 1}`} key={p.dbId} style={{ background: p.gradient }}>
+          <div
+            className={`pouch p${i + 1}`}
+            key={p.dbId}
+            style={{ background: p.gradient }}
+          >
             <div className="pouch-photo">
               <Image
                 src={p.image}
@@ -68,7 +73,11 @@ export default function HeroSlider({ products }: { products: Product[] }) {
       <div className="hero-badge">100% Safe Formula</div>
 
       {pages.length > 1 && (
-        <div className="hero-dots" role="tablist" aria-label="Featured product slides">
+        <div
+          className="hero-dots"
+          role="tablist"
+          aria-label="Featured product slides"
+        >
           {pages.map((_, i) => (
             <button
               key={i}

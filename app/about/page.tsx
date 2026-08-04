@@ -47,14 +47,14 @@ const MISSION_VISION = [
     tag: "Our Mission",
     title: "Democratizing Premium Care",
     desc: "We believe every household deserves access to high-quality, dermatologically safe cleaning products without the premium price tag. We are committed to engineering formulas that work harder, so you don't have to.",
-    image: "/images/mission.jpg", // Replace with your actual image path
+    gradient: "from-blue-900 to-blue-950",
     reverse: false,
   },
   {
     tag: "Our Vision",
     title: "A Cleaner, Smarter Future",
     desc: "To be the most trusted name in home care—where honesty in formulation meets sustainability in packaging. We envision a future where effective cleaning leaves zero footprint on our environment.",
-    image: "/images/vision.jpg", // Replace with your actual image path
+    gradient: "from-amber-700 to-amber-900",
     reverse: true,
   },
 ];
@@ -148,13 +148,13 @@ export default function AboutPage() {
                 delay={index * 100}
                 className={item.reverse ? "lg:ltr" : ""}
               >
-                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-slate-200">
+                <div className={`relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br ${item.gradient} flex items-center justify-center`}>
                   <Image
-                    src={item.image}
+                    src="/images/cynora-logo.png"
                     alt={item.title}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    width={120}
+                    height={120}
+                    className="opacity-90 drop-shadow-lg"
                   />
                 </div>
               </Reveal>

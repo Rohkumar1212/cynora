@@ -84,7 +84,8 @@ export default function HomePage() {
   }, []);
 
   return (
-    <>
+   
+    <main className="w-full max-w-[100vw] overflow-x-hidden">
       {/* HERO */}
       <section className="hero" id="home">
         <div className="hero-glow">
@@ -393,6 +394,6 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
-    </>
+  </main>
   );
 }

@@ -61,7 +61,7 @@ export default function Footer() {
             <ul>
               <li><a href="mailto:info@sanctumchem.com">info@sanctumchem.com</a></li>
               <li><a href="tel:+917290925552">+91 72909 25552</a></li>
-              <li><a href="/contact">Lucknow, Uttar Pradesh, India</a></li>
+              <li><a href="/contact">Plot No: 432, IMT Industrial Area, Sector-68, Faridabad, Haryana-121004</a></li>
             </ul>
           </div>
         </div>

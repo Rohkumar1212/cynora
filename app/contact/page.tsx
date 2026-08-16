@@ -79,7 +79,7 @@ export default function ContactPage() {
                     </span>
                     <div>
                       <b style={{ display: "block", marginBottom: 2 }}>Based In</b>
-                      <span style={{ color: "var(--ink-soft)" }}>Lucknow, Uttar Pradesh, India</span>
+                      <span style={{ color: "var(--ink-soft)" }}>Plot No: 432, IMT Industrial Area, Sector-68, Faridabad, Haryana-121004</span>
                       <p style={{ margin: "2px 0 0", fontSize: 12.5, color: "var(--ink-soft)" }}>Shipping across India</p>
                     </div>
                   </div>

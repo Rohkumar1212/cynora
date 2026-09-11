@@ -84,12 +84,18 @@ export default function HomePage() {
   }, []);
 
   return (
-   
     <main className="w-full max-w-[100vw] overflow-x-hidden">
       {/* HERO */}
       <section className="hero" id="home">
         <div className="hero-glow">
-          <Image src="/images/hero-glow.svg" alt="" fill sizes="100vw" priority style={{ objectFit: "cover" }} />
+          <Image
+            src="/images/hero-glow.svg"
+            alt=""
+            fill
+            sizes="100vw"
+            priority
+            style={{ objectFit: "cover" }}
+          />
         </div>
         <div className="container hero-inner">
           <div>
@@ -105,26 +111,48 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={160}>
               <p className="lead">
-                Concentrated liquid detergents, dish wash gels, floor &amp; surface cleaners crafted for homes
-                and businesses that expect more from every wash, wipe and mop.
+                Concentrated liquid detergents, dish wash gels, floor &amp;
+                surface cleaners crafted for homes and businesses that expect
+                more from every wash, wipe and mop.
               </p>
             </Reveal>
             <Reveal delay={240}>
               <div className="hero-ctas">
-                <Link href="/products" className="btn btn-primary">Shop Now</Link>
-                <a href="#about" className="btn btn-ghost">Our Story</a>
+                <Link href="/products" className="btn btn-primary">
+                  Shop Now
+                </Link>
+                <a href="#about" className="btn btn-ghost">
+                  Our Story
+                </a>
               </div>
             </Reveal>
             <Reveal delay={320}>
               <div className="hero-stats">
-                <div><b>50K+</b><span>Happy Customers</span></div>
-                <div><b>8</b><span>Product Lines</span></div>
-                <div><b>4.8★</b><span>Average Rating</span></div>
+                <div>
+                  <b>50K+</b>
+                  <span>Happy Customers</span>
+                </div>
+                <div>
+                  <b>8</b>
+                  <span>Product Lines</span>
+                </div>
+                <div>
+                  <b>4.8★</b>
+                  <span>Average Rating</span>
+                </div>
               </div>
             </Reveal>
           </div>
           <Reveal delay={200}>
-            <HeroSlider products={heroProducts.length ? heroProducts : bestSellers.length ? bestSellers : gallery} />
+            <HeroSlider
+              products={
+                heroProducts.length
+                  ? heroProducts
+                  : bestSellers.length
+                    ? bestSellers
+                    : gallery
+              }
+            />
           </Reveal>
         </div>
       </section>
@@ -133,8 +161,10 @@ export default function HomePage() {
       <div className="marquee">
         <div className="marquee-track">
           <span>
-            ✦ Free Shipping Above ₹999 &nbsp; ✦ Cash on Delivery Available &nbsp; ✦ 100% Safe Formula &nbsp; ✦ Trusted by 50,000+ Homes &nbsp;
-            ✦ Free Shipping Above ₹999 &nbsp; ✦ Cash on Delivery Available &nbsp; ✦ 100% Safe Formula &nbsp; ✦ Trusted by 50,000+ Homes &nbsp;
+            ✦ Free Shipping Above ₹999 &nbsp; ✦ Cash on Delivery Available
+            &nbsp; ✦ 100% Safe Formula &nbsp; ✦ Trusted by 50,000+ Homes &nbsp;
+            ✦ Free Shipping Above ₹999 &nbsp; ✦ Cash on Delivery Available
+            &nbsp; ✦ 100% Safe Formula &nbsp; ✦ Trusted by 50,000+ Homes &nbsp;
           </span>
         </div>
       </div>
@@ -146,11 +176,23 @@ export default function HomePage() {
             <Reveal>
               {banner.link ? (
                 <Link href={banner.link} className="promo-banner">
-                  <Image src={banner.image} alt={banner.title || "Cynora promotion"} fill sizes="100vw" style={{ objectFit: "cover" }} />
+                  <Image
+                    src={banner.image}
+                    alt={banner.title || "Cynora promotion"}
+                    fill
+                    sizes="100vw"
+                    style={{ objectFit: "cover" }}
+                  />
                 </Link>
               ) : (
                 <div className="promo-banner">
-                  <Image src={banner.image} alt={banner.title || "Cynora promotion"} fill sizes="100vw" style={{ objectFit: "cover" }} />
+                  <Image
+                    src={banner.image}
+                    alt={banner.title || "Cynora promotion"}
+                    fill
+                    sizes="100vw"
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
               )}
             </Reveal>
@@ -164,20 +206,77 @@ export default function HomePage() {
           <Reveal>
             <div className="trust-strip">
               <div className="trust-item">
-                <span className="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" /></svg></span>
-                <div><b>Free Shipping</b><span>On orders above ₹999</span></div>
+                <span className="trust-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
+                  </svg>
+                </span>
+                <div>
+                  <b>Free Shipping</b>
+                  <span>On orders above ₹999</span>
+                </div>
               </div>
               <div className="trust-item">
-                <span className="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="6" width="20" height="12" rx="2" /><path d="M2 10h20" /></svg></span>
-                <div><b>Cash on Delivery</b><span>Pay when it arrives</span></div>
+                <span className="trust-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <rect x="2" y="6" width="20" height="12" rx="2" />
+                    <path d="M2 10h20" />
+                  </svg>
+                </span>
+                <div>
+                  <b>Cash on Delivery</b>
+                  <span>Pay when it arrives</span>
+                </div>
               </div>
               <div className="trust-item">
-                <span className="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z" /></svg></span>
-                <div><b>Safe &amp; Tested</b><span>Dermatologically approved</span></div>
+                <span className="trust-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6z" />
+                  </svg>
+                </span>
+                <div>
+                  <b>Safe &amp; Tested</b>
+                  <span>Dermatologically approved</span>
+                </div>
               </div>
               <div className="trust-item">
-                <span className="trust-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 12l5 5L21 6" /></svg></span>
-                <div><b>Easy Returns</b><span>7 day return window</span></div>
+                <span className="trust-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M3 12l5 5L21 6" />
+                  </svg>
+                </span>
+                <div>
+                  <b>Easy Returns</b>
+                  <span>7 day return window</span>
+                </div>
               </div>
             </div>
           </Reveal>
@@ -190,13 +289,18 @@ export default function HomePage() {
           <Reveal className="section-head">
             <span className="eyebrow">Why Cynora</span>
             <h2>Cleaning You Can Trust</h2>
-            <p>Every product is built on a simple promise — real performance without compromise.</p>
+            <p>
+              Every product is built on a simple promise — real performance
+              without compromise.
+            </p>
           </Reveal>
           <div className="features-grid">
             {FEATURES.map((f, i) => (
               <Reveal key={f.title} delay={i * 80}>
                 <div className="feature-card">
-                  <span className="feature-icon"><FeatureIcon name={f.icon} /></span>
+                  <span className="feature-icon">
+                    <FeatureIcon name={f.icon} />
+                  </span>
                   <h3>{f.title}</h3>
                   <p>{f.desc}</p>
                 </div>
@@ -207,22 +311,57 @@ export default function HomePage() {
       </section>
 
       {/* CATEGORIES */}
-      <section className="section" id="categories" style={{ background: "var(--paper)" }}>
+      <section
+        className="section"
+        id="categories"
+        style={{ background: "var(--paper)" }}
+      >
         <div className="container">
           <Reveal className="section-head">
             <span className="eyebrow">Shop by Category</span>
             <h2>Find Your Essentials</h2>
-            <p>From laundry to kitchen to floors — a complete cleaning range in one place.</p>
+            <p>
+              From laundry to kitchen to floors — a complete cleaning range in
+              one place.
+            </p>
           </Reveal>
           <div className="cat-grid">
             {categories.map((c, i) => (
               <Reveal key={c.slug} delay={i * 60}>
-                <Link href={`/products?category=${encodeURIComponent(c.slug)}`} className="cat-card">
-                  <span className="cat-circle" style={!c.icon ? { background: paletteForCategory(c.slug).gradient, color: "#fff" } : undefined}>
+                <Link
+                  href={`/products?category=${encodeURIComponent(c.slug)}`}
+                  className="cat-card"
+                >
+                  <span
+                    className="cat-circle"
+                    style={
+                      !c.icon
+                        ? {
+                            background: paletteForCategory(c.slug).gradient,
+                            color: "#fff",
+                          }
+                        : undefined
+                    }
+                  >
                     {c.icon ? (
-                      <Image src={c.icon} alt={c.name} fill sizes="64px" style={{ objectFit: "cover" }} />
+                      <Image
+                        src={c.icon}
+                        alt={c.name}
+                        fill
+                        sizes="64px"
+                        style={{ objectFit: "cover" }}
+                      />
                     ) : (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9" /></svg>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <circle cx="12" cy="12" r="9" />
+                      </svg>
                     )}
                   </span>
                   <span>{c.name}</span>
@@ -250,7 +389,9 @@ export default function HomePage() {
           </div>
           <div style={{ textAlign: "center", marginTop: 44 }}>
             <Reveal>
-              <Link href="/products" className="btn btn-primary">View All Products</Link>
+              <Link href="/products" className="btn btn-primary">
+                View All Products
+              </Link>
             </Reveal>
           </div>
         </div>
@@ -282,23 +423,54 @@ export default function HomePage() {
       <section className="section" id="about">
         <div className="container split">
           <Reveal>
-            <div className="split-visual">
-              <svg viewBox="0 0 200 200" fill="none">
-                <circle cx="100" cy="100" r="80" stroke="var(--gold)" strokeWidth="2" opacity="0.4" />
-                <path d="M60 100c10-30 30-46 60-40" stroke="var(--gold-deep)" strokeWidth="3" strokeLinecap="round" />
-                <path d="M50 130c20 14 60 14 90-6" stroke="var(--green)" strokeWidth="3" strokeLinecap="round" />
-              </svg>
+            <div
+              className="cynora-card-wrapper"
+              style={{
+                width: "100%",
+                maxWidth: "1200px", // Prevents the image from becoming too massive on ultra-wide screens
+                margin: "0 auto", // Centers the image
+              }}
+            >
+              <Image
+                src="/images/og-image.png" 
+                alt="Cynora - Loved by Homes, Trusted by Millions"
+                width={1920} 
+                height={1580} 
+                quality={100} 
+                priority={true} 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1200px"
+                style={{
+                  width: "100%",
+                  height: "auto", 
+                  objectFit: "contain",
+                  borderRadius: "16px", // Optional: smoothly rounds the corners to match your graphic's design
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.1)", // Optional: adds a soft drop shadow to make the card "pop"
+                }}
+              />
             </div>
           </Reveal>
           <Reveal delay={100}>
             <div>
               <span className="eyebrow">Why Choose Cynora</span>
-              <h2 className="serif" style={{ fontSize: "clamp(24px,3vw,32px)", margin: "10px 0 6px" }}>Built On Real Performance</h2>
+              <h2
+                className="serif"
+                style={{
+                  fontSize: "clamp(24px,3vw,32px)",
+                  margin: "10px 0 6px",
+                }}
+              >
+                Built On Real Performance
+              </h2>
               <div className="why-list">
                 {WHY.map((w, i) => (
                   <div className="why-item" key={w.title}>
-                    <span className="why-num">{String(i + 1).padStart(2, "0")}</span>
-                    <div><h4>{w.title}</h4><p>{w.desc}</p></div>
+                    <span className="why-num">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <h4>{w.title}</h4>
+                      <p>{w.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -318,8 +490,17 @@ export default function HomePage() {
           <div className="gallery-grid">
             {gallery.map((p, i) => (
               <Reveal key={p.dbId} delay={i * 70}>
-                <div className="gallery-tile" style={{ background: p.gradient }}>
-                  <Image src={p.image} alt={p.name} fill sizes="240px" style={{ objectFit: "cover" }} />
+                <div
+                  className="gallery-tile"
+                  style={{ background: p.gradient }}
+                >
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    fill
+                    sizes="240px"
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
               </Reveal>
             ))}
@@ -342,7 +523,10 @@ export default function HomePage() {
                   <p className="quote">&ldquo;{t.quote}&rdquo;</p>
                   <div className="testi-person">
                     <span className="testi-avatar">{t.name[0]}</span>
-                    <div><b>{t.name}</b><span>{t.role}</span></div>
+                    <div>
+                      <b>{t.name}</b>
+                      <span>{t.role}</span>
+                    </div>
                   </div>
                 </div>
               </Reveal>
@@ -362,9 +546,21 @@ export default function HomePage() {
             {FAQS.map((f, i) => (
               <Reveal key={f.q} delay={i * 60}>
                 <div className={`faq-item ${openFaq === i ? "open" : ""}`}>
-                  <button className="faq-q" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
+                  <button
+                    className="faq-q"
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  >
                     {f.q}
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4"><path d="M12 5v14M5 12h14" /></svg>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.4"
+                    >
+                      <path d="M12 5v14M5 12h14" />
+                    </svg>
                   </button>
                   <div className="faq-a">{f.a}</div>
                 </div>
@@ -376,9 +572,30 @@ export default function HomePage() {
 
       {/* CTA BAND */}
       <section className="cta-band" id="contact">
-        <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 20 }}>
-          <Reveal><div><h3>Become a Cynora Distributor</h3><p>Partner with us for bulk pricing and business supply across your region.</p></div></Reveal>
-          <Reveal delay={100}><a href="mailto:hello@cynora.in" className="btn btn-dark">Enquire Now</a></Reveal>
+        <div
+          className="container"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: 20,
+          }}
+        >
+          <Reveal>
+            <div>
+              <h3>Become a Cynora Distributor</h3>
+              <p>
+                Partner with us for bulk pricing and business supply across your
+                region.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <a href="mailto:hello@cynora.in" className="btn btn-dark">
+              Enquire Now
+            </a>
+          </Reveal>
         </div>
       </section>
 
@@ -394,6 +611,6 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
-  </main>
+    </main>
   );
 }

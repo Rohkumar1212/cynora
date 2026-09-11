@@ -148,12 +148,14 @@ export default function AboutPage() {
                 delay={index * 100}
                 className={item.reverse ? "lg:ltr" : ""}
               >
-                <div className={`relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br ${item.gradient} flex items-center justify-center`}>
+                <div
+                  className={`relative w-full aspect-[5/5] rounded-2xl overflow-hidden shadow-lg bg-gradient-to-br ${item.gradient} flex items-center justify-center`}
+                >
                   <Image
-                    src="/images/cynora-logo.png"
+                    src="/images/about.jpeg"
                     alt={item.title}
-                    width={120}
-                    height={120}
+                    width={500}
+                    height={400}
                     className="opacity-90 drop-shadow-lg"
                   />
                 </div>
@@ -243,7 +245,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-blue-600 text-center">
+      <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-[#f4ecda] text-center">
         <div className="max-w-3xl mx-auto flex flex-col items-center">
           <Reveal>
             <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
